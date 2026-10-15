@@ -329,8 +329,8 @@
 
     .hero-stats {
       display: grid;
-      grid-template-columns: 0.92fr 1.22fr 1fr;
-      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
       padding-top: 28px;
       border-top: 1px solid var(--border-line);
     }
@@ -627,6 +627,7 @@
       border: 1px solid var(--border-line);
       padding: 32px;
       margin-top: 56px;
+      scroll-margin-top: 96px;
     }
 
     .finder-title {
@@ -810,6 +811,16 @@
       font-size: 1.28rem;
       margin-top: 14px;
       margin-bottom: 4px;
+      line-height: 1.35;
+    }
+
+    .teacher-name-en {
+      display: inline-block;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      font-weight: 400;
+      margin-top: 2px;
     }
 
     .teacher-role {
@@ -838,7 +849,7 @@
     /* Booking & Consultation Section */
     .booking-layout {
       display: grid;
-      grid-template-columns: 0.95fr 1.15fr;
+      grid-template-columns: 1.15fr 0.95fr;
       gap: 36px;
       align-items: start;
     }
@@ -1130,10 +1141,28 @@
       .rules-card, .form-card, .finder-box, .teacher-banner {
         padding: 24px 20px;
       }
+      .finder-box {
+        scroll-margin-top: 132px;
+      }
     }
 
     body.is-mobile-device {
       padding-bottom: 68px;
+    }
+    body.is-mobile-device section {
+      padding: 64px 20px;
+    }
+    body.is-mobile-device .nav-container {
+      padding: 14px 20px;
+    }
+    body.is-mobile-device .rules-card,
+    body.is-mobile-device .form-card,
+    body.is-mobile-device .finder-box,
+    body.is-mobile-device .teacher-banner {
+      padding: 24px 20px;
+    }
+    body.is-mobile-device .finder-box {
+      scroll-margin-top: 132px;
     }
     body.is-mobile-device .hero,
     body.is-mobile-device .hero-stats,
@@ -1190,11 +1219,12 @@
 
       <!-- Main Nav Links -->
       <ul class="nav-links">
-        <li><a href="#moments">作品集</a></li>
-        <li><a href="#courses">花藝課程體系</a></li>
-        <li><a href="#business">商業業務與包班合作</a></li>
-        <li><a href="#philosophy">師資與實績</a></li>
-        <li><a href="#booking">預約課程／洽詢業務</a></li>
+        <li><a href="#moments">花藝作品</a></li>
+        <li><a href="#courses">花藝課程</a></li>
+        <li><a href="#finder">選課指南</a></li>
+        <li><a href="#business">合作提案</a></li>
+        <li><a href="#philosophy">關於花驛</a></li>
+        <li><a href="#booking">預約洽詢</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -1204,12 +1234,12 @@
 
     <!-- 手機版自動浮現之橫向滑動選單 -->
     <nav class="mobile-quick-nav" aria-label="手機版快速導覽">
-      <a href="#moments">作品集</a>
+      <a href="#moments">花藝作品</a>
       <a href="#courses">花藝課程</a>
-      <a href="#finder">選課嚮導</a>
-      <a href="#business">包班與業務</a>
-      <a href="#philosophy">師資理念</a>
-      <a href="#booking">預約／洽詢</a>
+      <a href="#finder">選課指南</a>
+      <a href="#business">合作提案</a>
+      <a href="#philosophy">關於花驛</a>
+      <a href="#booking">預約洽詢</a>
     </nav>
   </header>
 
@@ -1217,34 +1247,33 @@
   <section class="hero">
     <div>
       <span class="hero-eyebrow">FLORAL ATELIER &amp; EDUCATION</span>
-      <h1>在山海與日常之間，<br>安排一段屬於自己的美感時光。</h1>
+      <h1>在山海與日常之間，<br>留一段與花相伴的時光。</h1>
       <p class="hero-lead">
-        光影穿過樹影，風帶著海的氣息，花，在最自然的環境裡被完成。<br>
-        由主理花藝師<strong>鄭家俞（Sophia）</strong>帶領，於台東、高雄、屏東深耕花藝教學，提供定期常態班、定期證照班、戶外地景工作坊、國小「小小花藝師」社團外派與企業包班服務。
+        由主理花藝師<strong>鄭家俞（Sophia）</strong>帶領，從日常花藝到專業進修，陪你探索花材、色彩與構成，感受親手創作的美好。
       </p>
 
       <div class="hero-featured-box">
-        <h4 id="featured-title">定期常態班 ＆ 定期證照班</h4>
-        <p id="featured-desc">台東教室、高雄教室、屏東教室隔週常態開課中｜所有課程歡迎直接諮詢最新課表與名額</p>
+        <h4 id="featured-title">三地教室，各有風景</h4>
+        <p id="featured-desc">在台東，望著海創作；在屏東，與山景相伴；在高雄市中心，為忙碌日常留一段花藝時光。</p>
       </div>
 
       <div class="hero-actions">
         <a href="#courses" class="btn btn-sage">探索花藝課程</a>
-        <a href="#business" class="btn btn-soft">學校社團／企業業務合作</a>
+        <a href="#business" class="btn btn-soft">校園與企業合作</a>
       </div>
 
       <div class="hero-stats">
         <div>
-          <div class="stat-num">6 大教學系列</div>
-          <div class="stat-label">歐式古典・自然・結構・捧花・節慶・兒童</div>
+          <div class="stat-num">六大教學系列</div>
+          <div class="stat-label">歐式古典・自然・結構<br>捧花・節慶・兒童</div>
         </div>
         <div>
-          <div class="stat-num">台東 &amp; 高雄 &amp; 屏東</div>
-          <div class="stat-label">定期常態教室・山海戶外工作坊・外派授課</div>
+          <div class="stat-num">多元體驗形式</div>
+          <div class="stat-label">教室課程・戶外工作坊<br>社團外派・企業包班</div>
         </div>
         <div>
-          <div class="stat-num">全齡教學</div>
-          <div class="stat-label">成人花藝進修・國小課後「小小花藝師」</div>
+          <div class="stat-num">全齡花藝學習</div>
+          <div class="stat-label">成人進修・樂齡手作<br>兒童「小小花藝師」</div>
         </div>
       </div>
     </div>
@@ -1354,7 +1383,7 @@
           <div>
             <span class="b2b-num">SERVICE 01｜校園與機構教學</span>
             <h3>校園社團・寒暑假營隊・樂齡花藝</h3>
-            <p>讓花藝成為認識自然、探索美感的起點。花驛長期擔任高雄市四維國小「小小花藝師」課後社團指導老師，並曾與高雄市立裕誠幼兒園、鼓山國小附幼、臺東東海國小、南王 Puyuma 花環實驗小學附幼、南王文健站合作，依學員年齡與學習需求，規劃適合的花藝課程。</p>
+            <p>讓花藝成為認識自然、探索美感的起點。花驛長期擔任高雄市國小「小小花藝師」課後社團指導老師，並曾與高雄市立裕誠幼兒園、鼓山國小附幼、臺東東海國小、南王 Puyuma 花環實驗小學附幼、南王文健站合作，依學員年齡與學習需求，規劃適合的花藝課程。</p>
             <ul class="b2b-list">
               <li><strong>多元課程規劃｜</strong>提供上下學期課程及&amp;寒暑假密集營隊企劃及短期或單次課程。</li>
               <li><strong>結合手作體驗｜</strong>融入葉材黏貼、珍珠板、編織等花器與架構 DIY，探索不同植物媒材。</li>
@@ -1403,25 +1432,25 @@
     <div class="container">
       <div class="section-header">
         <span class="section-en">PHILOSOPHY &amp; FLORIST</span>
-        <h2>以花為驛站，連結自然與生活節奏</h2>
-        <p>我們相信花藝不只是技巧的堆疊，而是透過雙手觸摸植物肌理、傾聽內在節奏的生活練習。</p>
+        <h2>以花為伴，連結自然與生活的節奏</h2>
+        <p>我們相信，花藝不只是技法的學習，更是一場親近自然的生活練習。透過雙手感受植物的紋理，在枝葉與花朵之間，找回自己的節奏。</p>
       </div>
 
       <div class="philosophy-grid">
         <div class="phil-card">
           <span class="phil-num">01</span>
-          <h3>循序漸進的系統化引導</h3>
-          <p>從認識當季花材特性、正確使用花剪與鐵絲工具開始，逐步掌握古典幾何花型、自然平行線條與現代結構設計，讓初學者也能安心上手。</p>
+          <h3>循序漸進，從零開啟花藝之路</h3>
+          <p>從認識當季花材、熟悉花剪與鐵絲等工具開始，逐步學習古典幾何花型、自然平行線條與現代結構設計。透過有系統的引導與實作，讓初學者也能安心入門，慢慢建立創作的自信。</p>
         </div>
         <div class="phil-card">
           <span class="phil-num">02</span>
-          <h3>五感體驗與在地植物轉譯</h3>
-          <p>除了視覺構圖，更重視植物的木質與草本香氣。巧妙融合西洋常青松柏與台灣在地扁柏、艾草、抹草、山歸來，打造契合當代居家的低飽和溫潤美學。</p>
+          <h3>國際認證，培育專業花藝人才</h3>
+          <p>以系統化的花藝師培訓與國際證照課程，串聯基礎技法、設計觀念與實作應用。無論是零基礎入門、準備考取國際證書，或希望投入花藝創業，都能循序累積專業能力，走出自己的花藝之路。</p>
         </div>
         <div class="phil-card">
           <span class="phil-num">03</span>
-          <h3>三地常態教學與全齡推廣</h3>
-          <p>於台東教室、高雄教室、屏東教室隔週常態開課，並結合戶外地景創作與國小校園「小小花藝師」社團，提供溫暖細膩的教學品質。</p>
+          <h3>深耕三地，讓花藝走進日常</h3>
+          <p>於台東、高雄、屏東教室定期開課，並結合戶外地景創作與國小校園「小小花藝師」社團，將花藝帶入不同年齡與生活場景。以溫暖細膩的陪伴，讓每位學員都能感受親手創作的美好。</p>
         </div>
       </div>
 
@@ -1432,7 +1461,7 @@
               <use href="#huayi-flower-logo" />
             </svg>
           </div>
-          <h3 class="teacher-name">鄭家俞 Sophia Florist</h3>
+          <h3 class="teacher-name">鄭家俞<br><span class="teacher-name-en">Sophia Florist</span></h3>
           <div class="teacher-role">花驛 主理花藝師 ／ 專業花藝講師</div>
           <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.75;">
             深耕歐式花藝常態與證照教學、自然地景花藝創作與校園兒童花藝教育，帶領專業助教團隊共同推廣生活花藝美學。
@@ -1440,16 +1469,9 @@
         </div>
         <div>
           <h3 style="font-size:1.25rem; margin-bottom:12px;">教學經歷與長期合作網絡</h3>
-          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:16px; line-height:1.85;">
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.85;">
             花驛於<strong>台東教室（Fun Trip - 福美海景渡假民宿）</strong>、<strong>高雄教室</strong>與<strong>屏東教室</strong>隔週常態開課。除定期成人常態班與證照班外，亦長期擔任校園課後社團指導教師與戶外跨界花藝主辦單位，具備豐富之教學企劃與活動執行經驗。
           </p>
-          <div class="partner-tags">
-            <span class="partner-tag">財團法人采翊臻花卉文化藝術基金會（協辦合作）</span>
-            <span class="partner-tag">高雄市四維國小「小小花藝師」課後社團</span>
-            <span class="partner-tag">台東市南王 Puyuma 花環實驗小學附幼／南王文健站合作</span>
-            <span class="partner-tag">台東教室（Fun Trip - 福美海景渡假民宿）・高雄教室・屏東教室</span>
-            <span class="partner-tag">花藝協力夥伴：何佳娟、周芝蓮、李庭妤、林玉文、蔡岱玲老師</span>
-          </div>
         </div>
       </div>
     </div>
@@ -1465,54 +1487,7 @@
       </div>
 
       <div class="booking-layout">
-        <!-- Left: Official Rules & Privacy-Protected Payment Notice -->
-        <div class="rules-card">
-          <h3 style="font-size:1.15rem; margin-bottom:14px;">課程諮詢與報名三步驟</h3>
-          <ul class="step-list">
-            <li>
-              <span class="step-badge">1</span>
-              <div>
-                <strong style="font-size:0.92rem; font-weight:500;">線上諮詢課程或填寫當期報名表</strong>
-                <p style="font-size:0.84rem; color:var(--text-muted); margin-top:2px;">透過右側快速諮詢單、當期最新 Google 報名表單，或直接加入花驛官方 LINE（<code>@xgv4722f</code>）詢問最新課表與名額。</p>
-              </div>
-            </li>
-            <li>
-              <span class="step-badge">2</span>
-              <div>
-                <strong style="font-size:0.92rem; font-weight:500;">確認報名後由 LINE 私訊提供匯款帳號</strong>
-                <p style="font-size:0.84rem; color:var(--text-muted); margin-top:2px;">確認課程名額後，我們將透過 LINE 私訊提供匯款帳號；請於 <strong>3 日內完成匯款</strong>以保留名額（逾期將自動釋出名額）。</p>
-              </div>
-            </li>
-            <li>
-              <span class="step-badge">3</span>
-              <div>
-                <strong style="font-size:0.92rem; font-weight:500;">私訊回報轉帳後五碼完成報名</strong>
-                <p style="font-size:0.84rem; color:var(--text-muted); margin-top:2px;">完成匯款後請私訊官方 LINE 或 FB 粉專提供「轉帳後五碼」，收到【報名成功通知】即完成報名。</p>
-              </div>
-            </li>
-          </ul>
-
-          <div class="bank-box">
-            <h4>匯款帳號與繳費說明</h4>
-            <p>為保護帳戶隱私並確保各班名額統計準確，<strong>確認報名後由 LINE 私訊提供匯款帳號</strong>。</p>
-          </div>
-
-          <h4 style="font-size:0.92rem; margin-bottom:10px; font-weight:500;">課前溫馨叮嚀</h4>
-          <ul class="notice-list">
-            <li>為統計上課人數並提前赴花市準備材料，各班人數額滿即截止報名。</li>
-            <li>花材或部分自然素材會因季節與花市採購情況調整，實際花材以上課當天準備為準。</li>
-            <li>請自備基礎花藝工具：花剪、樹枝剪刀、小刀、鐵絲；課堂完成之作品花材皆可帶回家。</li>
-            <li>若上課當天臨時無法出席，因新鮮花材已專程採購，恕無法退費（可協調領回花材）。</li>
-            <li>參加戶外教學場次請自備防曬、防蚊物品，並建議攜帶帽子與雨具。</li>
-          </ul>
-
-          <!-- 可動態替換的最新 Google 報名表單按鈕區 -->
-          <div id="latest-form-container" style="margin-top:22px; padding-top:18px; border-top:1px solid var(--border-line);">
-            <!-- 由 SITE_DATA.latestGoogleForm 自動渲染 -->
-          </div>
-        </div>
-
-        <!-- Right: Dual-Mode Interactive Form -->
+        <!-- Left: Dual-Mode Interactive Form -->
         <div class="form-card">
           <div class="mode-switch">
             <button type="button" class="mode-btn active" id="modeBtnIndividual" onclick="switchFormMode('individual')">預約／諮詢個人課程</button>
@@ -1596,6 +1571,53 @@
               <a href="https://lin.ee/sOsB2Bd" target="_blank" rel="noopener" class="btn btn-soft" style="font-size:0.84rem; padding:8px 16px;">開啟官方 LINE 傳送</a>
               <a href="https://www.facebook.com/share/1DgaoyHLLE/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.84rem; padding:8px 16px;">前往 FB 粉專私訊</a>
             </div>
+          </div>
+        </div>
+
+        <!-- Right: Official Rules & Privacy-Protected Payment Notice -->
+        <div class="rules-card">
+          <h3 style="font-size:1.15rem; margin-bottom:14px;">課程諮詢與報名三步驟</h3>
+          <ul class="step-list">
+            <li>
+              <span class="step-badge">1</span>
+              <div>
+                <strong style="font-size:0.92rem; font-weight:500;">線上諮詢課程或填寫當期報名表</strong>
+                <p style="font-size:0.84rem; color:var(--text-muted); margin-top:2px;">透過左側快速諮詢單、當期最新 Google 報名表單，或直接加入花驛官方 LINE（<code>@xgv4722f</code>）詢問最新課表與名額。</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">2</span>
+              <div>
+                <strong style="font-size:0.92rem; font-weight:500;">確認報名後由 LINE 私訊提供匯款帳號</strong>
+                <p style="font-size:0.84rem; color:var(--text-muted); margin-top:2px;">確認課程名額後，我們將透過 LINE 私訊提供匯款帳號；請於 <strong>3 日內完成匯款</strong>以保留名額（逾期將自動釋出名額）。</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-badge">3</span>
+              <div>
+                <strong style="font-size:0.92rem; font-weight:500;">私訊回報轉帳後五碼完成報名</strong>
+                <p style="font-size:0.84rem; color:var(--text-muted); margin-top:2px;">完成匯款後請私訊官方 LINE 或 FB 粉專提供「轉帳後五碼」，收到【報名成功通知】即完成報名。</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="bank-box">
+            <h4>匯款帳號與繳費說明</h4>
+            <p>為保護帳戶隱私並確保各班名額統計準確，<strong>確認報名後由 LINE 私訊提供匯款帳號</strong>。</p>
+          </div>
+
+          <h4 style="font-size:0.92rem; margin-bottom:10px; font-weight:500;">課前溫馨叮嚀</h4>
+          <ul class="notice-list">
+            <li>為統計上課人數並提前赴花市準備材料，各班人數額滿即截止報名。</li>
+            <li>花材或部分自然素材會因季節與花市採購情況調整，實際花材以上課當天準備為準。</li>
+            <li>請自備基礎花藝工具：花剪、樹枝剪刀、小刀、鐵絲；課堂完成之作品花材皆可帶回家。</li>
+            <li>若上課當天臨時無法出席，因新鮮花材已專程採購，恕無法退費（可協調領回花材）。</li>
+            <li>參加戶外教學場次請自備防曬、防蚊物品，並建議攜帶帽子與雨具。</li>
+          </ul>
+
+          <!-- 可動態替換的最新 Google 報名表單按鈕區 -->
+          <div id="latest-form-container" style="margin-top:22px; padding-top:18px; border-top:1px solid var(--border-line);">
+            <!-- 由 SITE_DATA.latestGoogleForm 自動渲染 -->
           </div>
         </div>
       </div>
@@ -1712,8 +1734,8 @@
 
     // 2. 頂部最新公告與重點課程
     announcement: "花驛 Sophia Florist｜定期常態班 ＆ 定期證照班・台東／高雄／屏東教室隔週常態開課中",
-    featuredTitle: "定期常態班 ＆ 定期證照班",
-    featuredDesc: "台東教室、高雄教室、屏東教室隔週常態開課中｜所有課程歡迎直接諮詢最新課表與名額",
+    featuredTitle: "三地教室，各有風景",
+    featuredDesc: "在台東，望著海創作；在屏東，與山景相伴；在高雄市中心，為忙碌日常留一段花藝時光。",
 
     // 3. 作品集與課堂美好瞬間（皆為花驛實拍作品，依主題與色彩配置）
     gallery: [
@@ -1941,7 +1963,7 @@
     } else {
       container.innerHTML = `
         <p style="font-size:0.83rem; color:var(--text-muted); line-height:1.75;">
-          各期課程與主題工作坊表單依當月活動更新，請直接透過右方諮詢單或 <a href="https://lin.ee/sOsB2Bd" target="_blank" rel="noopener" style="color:var(--sage-dark); border-bottom:1px solid var(--sage-main);">官方 LINE (@xgv4722f)</a> 索取最新報名連結。
+          各期課程與主題工作坊表單依當月活動更新，請直接透過左方諮詢單或 <a href="https://lin.ee/sOsB2Bd" target="_blank" rel="noopener" style="color:var(--sage-dark); border-bottom:1px solid var(--sage-main);">官方 LINE (@xgv4722f)</a> 索取最新報名連結。
         </p>
       `;
     }
@@ -2191,8 +2213,7 @@
     fullHtml = fullHtml.replace(/logoStyle:\s*"[^"]*"/, `logoStyle: ${JSON.stringify(newLogoStyle)}`);
     fullHtml = fullHtml.replace(
       /latestGoogleForm:\s*\{[\s\S]*?\}/,
-      `latestGoogleForm: {\n      title: ${JSON.stringify(newTitle)},\n      url: ${JSON.stringify(newUrl)}\
-    }`
+      `latestGoogleForm: {\n      title: ${JSON.stringify(newTitle)},\n      url: ${JSON.stringify(newUrl)}\n    }`
     );
 
     const blob = new Blob([fullHtml], { type: 'text/html;charset=utf-8' });
