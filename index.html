@@ -1150,6 +1150,197 @@
     body.is-mobile-device .hero h1 {
       font-size: 1.85rem !important;
     }
+
+    /* =================================================================
+       最新 Google 課程報名表單：頁首置頂橫幅、首頁第一屏報名卡、頁內展開填寫與浮動按鈕
+       ================================================================= */
+    .top-form-banner {
+      display: none;
+      background-color: var(--sage-dark);
+      color: #FFFFFF;
+      padding: 11px 20px;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #465849;
+    }
+
+    .top-form-banner-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      text-align: center;
+    }
+
+    .top-form-badge {
+      background-color: rgba(255, 255, 255, 0.18);
+      color: #FFFFFF;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    .top-form-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--bg-cream);
+      color: var(--sage-dark) !important;
+      padding: 5px 15px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .top-form-btn:hover {
+      background-color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .top-form-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background-color: transparent;
+      color: #FFFFFF !important;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      cursor: pointer;
+    }
+
+    .top-form-btn-ghost:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    /* 首頁第一屏（頁首）最新課程報名專屬卡片 */
+    .hero-form-spotlight {
+      display: none;
+      background-color: var(--sage-soft);
+      border: 1.5px solid var(--sage-main);
+      border-radius: var(--radius-md);
+      padding: 20px 22px;
+      margin-bottom: 28px;
+    }
+
+    .hero-form-spotlight-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .hero-form-eyebrow {
+      font-size: 0.76rem;
+      color: var(--sage-dark);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      background-color: #FFFFFF;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid #CFDACE;
+    }
+
+    .hero-form-spotlight h4 {
+      font-size: 1.06rem;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .hero-form-spotlight p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.65;
+    }
+
+    .hero-form-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* 頁首直接展開之內嵌 Google 表單抽屜區 */
+    .hero-embed-drawer {
+      display: none;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #CFDACE;
+    }
+
+    .hero-embed-iframe-wrap {
+      width: 100%;
+      height: 540px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-line);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .hero-embed-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* 手機快速導覽列醒目報名鈕 */
+    .mobile-quick-nav a.mobile-nav-form-cta {
+      background-color: var(--sage-main);
+      color: #FFFFFF;
+      font-weight: 500;
+    }
+
+    /* 預約區頂部全寬報名橫幅 */
+    .booking-top-form-banner {
+      display: none;
+      background-color: var(--sage-soft);
+      border: 1.5px solid var(--sage-main);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      margin-bottom: 36px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* 右下角浮動快速報名按鈕 */
+    .floating-form-cta {
+      display: none;
+      position: fixed;
+      right: 20px;
+      bottom: 22px;
+      z-index: 95;
+      background-color: var(--sage-dark);
+      color: #FFFFFF !important;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 6px 20px rgba(58, 58, 56, 0.18);
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .floating-form-cta:hover {
+      background-color: var(--sage-main);
+    }
   </style>
 </head>
 <body>
@@ -1162,6 +1353,9 @@
       </g>
     </defs>
   </svg>
+
+  <!-- 頁首最頂端：最新一期 Google 課程報名表單置頂公告列（有表單網址時自動顯示於頁首第一行） -->
+  <div id="top-form-banner" class="top-form-banner" role="region" aria-label="最新課程報名表單置頂公告"></div>
 
   <!-- Header Navigation -->
   <header>
@@ -1188,13 +1382,15 @@
         <li><a href="#booking">預約洽詢</a></li>
       </ul>
 
-      <div class="nav-actions">
-        <a href="https://lin.ee/sOsB2Bd" target="_blank" rel="noopener" class="btn btn-sage" style="padding:9px 20px; font-size:0.85rem;">LINE 諮詢</a>
+      <div class="nav-actions" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <a id="header-form-cta" href="#booking" target="_blank" rel="noopener" class="btn btn-sage" style="display:none; padding:9px 18px; font-size:0.85rem;">最新課程報名表</a>
+        <a id="header-line-cta" href="https://lin.ee/sOsB2Bd" target="_blank" rel="noopener" class="btn btn-sage" style="padding:9px 20px; font-size:0.85rem;">LINE 諮詢</a>
       </div>
     </div>
 
     <!-- 手機版自動浮現之橫向滑動選單 -->
     <nav class="mobile-quick-nav" aria-label="手機版快速導覽">
+      <a id="mobile-nav-form-cta" href="#booking" target="_blank" rel="noopener" class="mobile-nav-form-cta" style="display:none;">✦ 最新課程報名表</a>
       <a href="#moments">花藝作品</a>
       <a href="#courses">花藝課程</a>
       <a href="#finder">選課指南</a>
@@ -1213,6 +1409,9 @@
         由主理花藝師<strong>鄭家俞（Sophia）</strong>帶領，從日常花藝到專業進修，陪你探索花材、色彩與構成，感受親手創作的美好。
       </p>
 
+      <!-- 頁首第一屏：最新 Google 課程報名表單醒目專區（設定最新表單網址後直接顯示於頁首，免往下拉！） -->
+      <div id="hero-form-spotlight" class="hero-form-spotlight"></div>
+
       <div class="hero-featured-box">
         <h4 id="featured-title">三地教室，各有風景</h4>
         <p id="featured-desc">在台東，望著海創作；在屏東，與山景相伴；在高雄市中心，為忙碌日常留一段花藝時光。</p>
@@ -1220,6 +1419,7 @@
 
       <div class="hero-actions">
         <a href="#courses" class="btn btn-sage">探索花藝課程</a>
+        <a href="#booking" class="btn btn-outline">線上預約／課程諮詢</a>
         <a href="#business" class="btn btn-soft">校園與企業合作</a>
       </div>
 
@@ -1447,6 +1647,9 @@
         <p>所有課程與合作專案皆歡迎直接透過 LINE 私訊或下方表單諮詢；確認報名後將由 LINE 私訊提供匯款帳號。</p>
       </div>
 
+      <!-- 預約區頂部：當期最新 Google 課程報名表單醒目入口 -->
+      <div id="booking-top-form-banner" class="booking-top-form-banner"></div>
+
       <div class="booking-layout">
         <!-- Left: Dual-Mode Interactive Form -->
         <div class="form-card">
@@ -1633,12 +1836,17 @@
 
 </div><!-- /#site-wrapper -->
 
+<!-- 右下角浮動「最新課程報名表單」快速按鈕（設定網址後自動顯示） -->
+<a id="floating-form-cta" href="#booking" target="_blank" rel="noopener" class="floating-form-cta" aria-label="前往填寫最新課程 Google 報名表單">
+  <span>✎ 填寫最新課程報名表</span>
+</a>
+
 <!-- 站長專屬「更換最新 Google 報名表單網址」小工具彈窗 -->
 <div id="formUpdaterModal" class="admin-modal">
-  <div class="admin-modal-content">
-    <h3 style="font-size:1.15rem; margin-bottom:8px;">更換最新 Google 報名表單網址</h3>
-    <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:18px;">
-      因為每次活動的 Google 表單主題與網址不同，您可以在此輸入最新一期的 Google 表單名稱與網址，點擊「套用並下載最新 index.html」，再上傳覆蓋至 GitHub 即可（若留空網址則會自動隱藏表單按鈕）。
+  <div class="admin-modal-content" style="max-width:540px;">
+    <h3 style="font-size:1.15rem; margin-bottom:8px;">更換最新 Google 報名表單網址（頁首置頂顯示）</h3>
+    <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:16px; line-height:1.75;">
+      貼上最新一期 Google 表單網址後，系統會自動將報名表單顯示在<strong>「網頁頁首置頂公告列」、「首頁第一屏主視覺專區（支援新分頁開啟＆頁首直接展開填寫）」、「常駐置頂導覽列」與「右下角浮動報名鈕」</strong>，插花學員一打開網頁即可馬上報名，完全不必拉到頁尾！（若留空網址則自動隱藏）
     </p>
     <div class="form-group">
       <label for="adminLogoStyle">花驛 LOGO 顯示樣式</label>
@@ -1655,6 +1863,10 @@
     <div class="form-group">
       <label for="adminFormUrl">最新 Google 表單網址 (URL)</label>
       <input type="url" id="adminFormUrl" class="form-control" placeholder="請貼上 https://docs.google.com/forms/... 或 https://forms.gle/... 網址">
+      <div style="display:flex; gap:10px; margin-top:8px; flex-wrap:wrap;">
+        <button type="button" class="btn btn-soft" style="padding:4px 12px; min-height:30px; font-size:0.76rem;" onclick="fillSampleFormUrl()">帶入範例網址測試頁首效果</button>
+        <button type="button" class="btn btn-soft" style="padding:4px 12px; min-height:30px; font-size:0.76rem;" onclick="clearAdminFormUrl()">清空網址（隱藏表單按鈕）</button>
+      </div>
     </div>
     <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:22px;">
       <button type="button" class="btn btn-sage" onclick="applyAndDownloadUpdatedHtml()">套用並下載最新 index.html</button>
@@ -1902,24 +2114,189 @@
     }
   }
 
+  function getEmbeddableGoogleFormUrl(rawUrl) {
+    if (!rawUrl) return "";
+    let u = rawUrl.trim();
+    if (u.includes("docs.google.com/forms") && !u.includes("embedded=true")) {
+      u += (u.includes("?") ? "&" : "?") + "embedded=true";
+    }
+    return u;
+  }
+
+  function toggleHeroInlineForm() {
+    const drawer = document.getElementById('hero-embed-drawer');
+    const iframe = document.getElementById('hero-embed-iframe');
+    const btn = document.getElementById('hero-embed-toggle-btn');
+    const gf = SITE_DATA.latestGoogleForm;
+    if (!drawer || !gf || !gf.url) return;
+    if (drawer.style.display === 'block') {
+      drawer.style.display = 'none';
+      if (btn) btn.textContent = '在頁首直接展開表單填寫 ▾';
+    } else {
+      const embedUrl = getEmbeddableGoogleFormUrl(gf.url);
+      if (iframe && iframe.getAttribute('src') !== embedUrl) {
+        iframe.setAttribute('src', embedUrl);
+      }
+      drawer.style.display = 'block';
+      if (btn) btn.textContent = '收合頁內表單 ▴';
+      drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  function openHeroInlineFormFromTop() {
+    const spotlight = document.getElementById('hero-form-spotlight');
+    const drawer = document.getElementById('hero-embed-drawer');
+    if (spotlight) {
+      spotlight.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    if (drawer && drawer.style.display !== 'block') {
+      toggleHeroInlineForm();
+    }
+  }
+
   function renderLatestGoogleForm() {
     const container = document.getElementById('latest-form-container');
+    const topBanner = document.getElementById('top-form-banner');
+    const heroSpotlight = document.getElementById('hero-form-spotlight');
+    const bookingTopBanner = document.getElementById('booking-top-form-banner');
+    const headerFormCta = document.getElementById('header-form-cta');
+    const headerLineCta = document.getElementById('header-line-cta');
+    const mobileNavFormCta = document.getElementById('mobile-nav-form-cta');
+    const floatingFormCta = document.getElementById('floating-form-cta');
+
     const gf = SITE_DATA.latestGoogleForm;
-    if (gf && gf.url && gf.url.trim() !== "") {
-      container.innerHTML = `
-        <div style="background:var(--sage-soft); border:1px solid #CFDACE; padding:16px 18px;">
-          <strong style="color:var(--sage-dark); font-size:0.88rem; display:block; margin-bottom:10px;">當期活動開放報名中：</strong>
-          <a href="${gf.url}" target="_blank" rel="noopener" class="btn btn-sage" style="width:100%; font-size:0.88rem;">
-            ${gf.title || '點此前往最新 Google 報名表單'}
+    const hasUrl = Boolean(gf && gf.url && gf.url.trim() !== "");
+    const formTitle = (gf && gf.title && gf.title.trim() !== "") ? gf.title.trim() : "點此前往最新一期 Google 課程報名表單";
+    const formUrl = hasUrl ? gf.url.trim() : "";
+
+    if (hasUrl) {
+      // 1. 頁首最頂端置頂公告列
+      if (topBanner) {
+        topBanner.style.display = 'block';
+        topBanner.innerHTML = `
+          <div class="top-form-banner-inner">
+            <span class="top-form-badge">當期課程開放報名中</span>
+            <span style="font-weight:500;">${formTitle}</span>
+            <div style="display:inline-flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:center;">
+              <a href="${formUrl}" target="_blank" rel="noopener" class="top-form-btn">
+                立即開啟表單報名 →
+              </a>
+              <button type="button" class="top-form-btn-ghost" onclick="openHeroInlineFormFromTop()">
+                頁首直接展開填寫
+              </button>
+            </div>
+          </div>
+        `;
+      }
+
+      // 2. 首頁第一屏（頁首主視覺區）醒目報名專區卡片 + 頁內直接展開填寫抽屜
+      if (heroSpotlight) {
+        heroSpotlight.style.display = 'block';
+        heroSpotlight.innerHTML = `
+          <div class="hero-form-spotlight-header">
+            <span class="hero-form-eyebrow">✦ 當期最新課程報名表單</span>
+            <span style="font-size:0.78rem; color:var(--sage-dark);">名額有限・額滿截止</span>
+          </div>
+          <h4>${formTitle}</h4>
+          <p>插花學員無須往下滑動至頁尾，可直接於此處點開最新一期 Google 報名表單，或在下方直接展開填寫：</p>
+          <div class="hero-form-btn-group">
+            <a href="${formUrl}" target="_blank" rel="noopener" class="btn btn-sage" style="flex:1 1 220px; font-weight:500;">
+              開啟最新 Google 報名表單 →
+            </a>
+            <button type="button" id="hero-embed-toggle-btn" class="btn btn-outline" style="background:#FFFFFF; flex:0 1 auto;" onclick="toggleHeroInlineForm()">
+              在頁首直接展開表單填寫 ▾
+            </button>
+          </div>
+          <div id="hero-embed-drawer" class="hero-embed-drawer">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px; font-size:0.8rem; color:var(--text-muted);">
+              <span>您可以直接在下方視窗填寫並提交表單（若使用外部短網址無法內嵌顯示，請點擊右側開啟新分頁）：</span>
+              <a href="${formUrl}" target="_blank" rel="noopener" style="color:var(--sage-dark); font-weight:500; text-decoration:underline;">在新分頁開啟完整表單 ↗</a>
+            </div>
+            <div class="hero-embed-iframe-wrap">
+              <iframe id="hero-embed-iframe" src="" title="${formTitle}" loading="lazy">載入中…</iframe>
+            </div>
+          </div>
+        `;
+      }
+
+      // 3. 置頂常駐導覽列（電腦版與手機版）報名按鈕
+      if (headerFormCta) {
+        headerFormCta.href = formUrl;
+        headerFormCta.style.display = 'inline-flex';
+      }
+      if (headerLineCta) {
+        headerLineCta.className = 'btn btn-outline';
+      }
+      if (mobileNavFormCta) {
+        mobileNavFormCta.href = formUrl;
+        mobileNavFormCta.style.display = 'inline-block';
+      }
+
+      // 4. 預約洽詢區（#booking）最頂端全寬報名橫幅
+      if (bookingTopBanner) {
+        bookingTopBanner.style.display = 'flex';
+        bookingTopBanner.innerHTML = `
+          <div>
+            <span class="hero-form-eyebrow" style="display:inline-block; margin-bottom:6px;">✦ 最新一期課程報名中</span>
+            <h3 style="font-size:1.12rem; margin-bottom:4px;">${formTitle}</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted);">報名當期最新花藝課程的學員，請優先點擊右側按鈕填寫最新一期 Google 報名表單。</p>
+          </div>
+          <a href="${formUrl}" target="_blank" rel="noopener" class="btn btn-sage" style="white-space:nowrap;">
+            點此填寫最新 Google 報名表單 →
           </a>
-        </div>
-      `;
+        `;
+      }
+
+      // 5. 右下角浮動快速報名膠囊按鈕
+      if (floatingFormCta) {
+        floatingFormCta.href = formUrl;
+        floatingFormCta.style.display = 'inline-flex';
+      }
+
+      // 6. 報名三步驟下方備用按鈕
+      if (container) {
+        container.innerHTML = `
+          <div style="background:var(--sage-soft); border:1px solid #CFDACE; padding:16px 18px;">
+            <strong style="color:var(--sage-dark); font-size:0.88rem; display:block; margin-bottom:10px;">當期活動開放報名中：</strong>
+            <a href="${formUrl}" target="_blank" rel="noopener" class="btn btn-sage" style="width:100%; font-size:0.88rem;">
+              ${formTitle}
+            </a>
+          </div>
+        `;
+      }
     } else {
-      container.innerHTML = `
-        <p style="font-size:0.83rem; color:var(--text-muted); line-height:1.75;">
-          各期課程與主題工作坊表單依當月活動更新，請直接透過左方諮詢單或 <a href="https://lin.ee/sOsB2Bd" target="_blank" rel="noopener" style="color:var(--sage-dark); border-bottom:1px solid var(--sage-main);">官方 LINE (@xgv4722f)</a> 索取最新報名連結。
-        </p>
-      `;
+      // 當網址留空時：隱藏所有最新 Google 表單專屬橫幅與浮動鈕，恢復純 LINE 諮詢狀態
+      if (topBanner) {
+        topBanner.style.display = 'none';
+        topBanner.innerHTML = '';
+      }
+      if (heroSpotlight) {
+        heroSpotlight.style.display = 'none';
+        heroSpotlight.innerHTML = '';
+      }
+      if (headerFormCta) {
+        headerFormCta.style.display = 'none';
+      }
+      if (headerLineCta) {
+        headerLineCta.className = 'btn btn-sage';
+      }
+      if (mobileNavFormCta) {
+        mobileNavFormCta.style.display = 'none';
+      }
+      if (bookingTopBanner) {
+        bookingTopBanner.style.display = 'none';
+        bookingTopBanner.innerHTML = '';
+      }
+      if (floatingFormCta) {
+        floatingFormCta.style.display = 'none';
+      }
+      if (container) {
+        container.innerHTML = `
+          <p style="font-size:0.83rem; color:var(--text-muted); line-height:1.75;">
+            各期課程與主題工作坊表單依當月活動更新，請直接透過左方諮詢單或 <a href="https://lin.ee/sOsB2Bd" target="_blank" rel="noopener" style="color:var(--sage-dark); border-bottom:1px solid var(--sage-main);">官方 LINE (@xgv4722f)</a> 索取最新報名連結。
+          </p>
+        `;
+      }
     }
   }
 
@@ -2147,11 +2524,32 @@
     document.getElementById('formUpdaterModal').style.display = 'none';
   }
 
+  function fillSampleFormUrl() {
+    const titleInput = document.getElementById('adminFormTitle');
+    const urlInput = document.getElementById('adminFormUrl');
+    if (titleInput && !titleInput.value.trim()) {
+      titleInput.value = '點此填寫最新一期花驛課程 Google 報名表單';
+    }
+    if (urlInput) {
+      urlInput.value = 'https://docs.google.com/forms/';
+    }
+  }
+
+  function clearAdminFormUrl() {
+    const urlInput = document.getElementById('adminFormUrl');
+    if (urlInput) {
+      urlInput.value = '';
+    }
+  }
+
   function previewFormButtonOnly() {
+    const newLogoStyle = document.getElementById('adminLogoStyle').value;
+    applyLogoStyle(newLogoStyle);
     SITE_DATA.latestGoogleForm.title = document.getElementById('adminFormTitle').value.trim() || '點此前往最新一期 Google 課程報名表單';
     SITE_DATA.latestGoogleForm.url = document.getElementById('adminFormUrl').value.trim();
     renderLatestGoogleForm();
     closeFormUpdaterModal();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function applyAndDownloadUpdatedHtml() {
@@ -2162,6 +2560,7 @@
     SITE_DATA.latestGoogleForm.title = newTitle;
     SITE_DATA.latestGoogleForm.url = newUrl;
     renderLatestGoogleForm();
+    closeFormUpdaterModal();
 
     let fullHtml = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
     fullHtml = fullHtml.replace(/logoStyle:\s*"[^"]*"/, `logoStyle: ${JSON.stringify(newLogoStyle)}`);
@@ -2175,7 +2574,7 @@
     a.href = URL.createObjectURL(blob);
     a.download = 'index.html';
     a.click();
-    closeFormUpdaterModal();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   window.addEventListener('DOMContentLoaded', initSite);
