@@ -1017,33 +1017,6 @@
       padding: 32px;
     }
 
-    /* 手機版底部固定行動列 - 明亮奶油米白底色 */
-    .mobile-bottom-bar {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(253, 251, 247, 0.96);
-      backdrop-filter: blur(8px);
-      border-top: 1px solid var(--border-line);
-      padding: 10px 14px;
-      z-index: 200;
-      grid-template-columns: 1fr 1fr 1.15fr;
-      gap: 8px;
-    }
-
-    .mobile-bottom-bar a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 8px;
-      border-radius: var(--radius-sm);
-      font-size: 0.82rem;
-      letter-spacing: 0.04em;
-      text-align: center;
-    }
-
     /* Footer - 溫潤淺燕麥米色，告別沉重深黑底色 */
     footer {
       background-color: #EFECE4;
@@ -1100,9 +1073,6 @@
        100% 自動感應切換手機版與平板排版（RWD + 裝置自動辨識）
        ================================================================= */
     @media (max-width: 920px) {
-      body {
-        padding-bottom: 68px;
-      }
       section {
         padding: 64px 20px;
       }
@@ -1135,9 +1105,6 @@
       .mobile-quick-nav {
         display: flex;
       }
-      .mobile-bottom-bar {
-        display: grid;
-      }
       .rules-card, .form-card, .finder-box, .teacher-banner {
         padding: 24px 20px;
       }
@@ -1146,9 +1113,6 @@
       }
     }
 
-    body.is-mobile-device {
-      padding-bottom: 68px;
-    }
     body.is-mobile-device section {
       padding: 64px 20px;
     }
@@ -1182,9 +1146,6 @@
     }
     body.is-mobile-device .mobile-quick-nav {
       display: flex !important;
-    }
-    body.is-mobile-device .mobile-bottom-bar {
-      display: grid !important;
     }
     body.is-mobile-device .hero h1 {
       font-size: 1.85rem !important;
@@ -1669,13 +1630,6 @@
       </span>
     </div>
   </footer>
-
-  <!-- 手機裝置自動浮現之底部固定懸浮行動列 -->
-  <div class="mobile-bottom-bar" aria-label="手機快速聯繫列">
-    <a href="https://lin.ee/sOsB2Bd" target="_blank" rel="noopener" style="background:var(--sage-soft); color:var(--sage-dark); border:1px solid #CFDACE;">LINE 諮詢</a>
-    <a href="https://www.instagram.com/flowersmoments?igsh=aW81djhvcmN3bTk5" target="_blank" rel="noopener" style="background:var(--bg-beige); color:var(--text-main); border:1px solid var(--border-line);">瀏覽 IG 作品集</a>
-    <a href="#booking" style="background:var(--sage-main); color:#FFFFFF;">預約／洽詢</a>
-  </div>
 
 </div><!-- /#site-wrapper -->
 
