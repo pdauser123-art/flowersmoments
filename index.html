@@ -693,7 +693,7 @@
     .b2b-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-line);
-      padding: 32px 28px;
+      padding: 26px 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -701,36 +701,36 @@
 
     .b2b-num {
       font-family: "Noto Serif TC", serif;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--sage-dark);
       letter-spacing: 0.12em;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       display: block;
     }
 
     .b2b-card h3 {
-      font-size: 1.16rem;
-      margin-bottom: 12px;
+      font-size: 1.12rem;
+      margin-bottom: 10px;
       font-weight: 500;
     }
 
     .b2b-card p {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
-      margin-bottom: 18px;
-      line-height: 1.8;
+      margin-bottom: 14px;
+      line-height: 1.65;
     }
 
     .b2b-list {
       list-style: none;
       font-size: 0.83rem;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
       border-top: 1px solid var(--border-line);
-      padding-top: 14px;
+      padding-top: 12px;
     }
 
     .b2b-list li {
-      margin-bottom: 7px;
+      margin-bottom: 6px;
       padding-left: 14px;
       position: relative;
       color: var(--text-main);
@@ -1105,8 +1105,11 @@
       .mobile-quick-nav {
         display: flex;
       }
-      .rules-card, .form-card, .finder-box, .teacher-banner {
-        padding: 24px 20px;
+      .rules-card, .form-card, .finder-box, .teacher-banner, .b2b-card {
+        padding: 20px 18px;
+      }
+      .b2b-grid {
+        gap: 16px;
       }
       .finder-box {
         scroll-margin-top: 132px;
@@ -1122,8 +1125,12 @@
     body.is-mobile-device .rules-card,
     body.is-mobile-device .form-card,
     body.is-mobile-device .finder-box,
-    body.is-mobile-device .teacher-banner {
-      padding: 24px 20px;
+    body.is-mobile-device .teacher-banner,
+    body.is-mobile-device .b2b-card {
+      padding: 20px 18px;
+    }
+    body.is-mobile-device .b2b-grid {
+      gap: 16px;
     }
     body.is-mobile-device .finder-box {
       scroll-margin-top: 132px;
@@ -1451,13 +1458,13 @@
         <div class="b2b-card">
           <div>
             <span class="b2b-num">SERVICE 01｜校園與機構教學</span>
-            <h3>校園社團・寒暑假營隊・樂齡花藝</h3>
-            <p>讓花藝成為認識自然、探索美感的起點。花驛長期擔任高雄市國小「小小花藝師」課後社團指導老師，並曾與高雄市立裕誠幼兒園、鼓山國小附幼、臺東東海國小、南王 Puyuma 花環實驗小學附幼、南王文健站合作，依學員年齡與學習需求，規劃適合的花藝課程。</p>
+            <h3>校園社團・寒暑期營隊・樂齡花藝</h3>
+            <p>依年齡與需求量身設計，長期與高屏、台東多所國小、附幼及文健站合作開課。</p>
             <ul class="b2b-list">
-              <li><strong>多元課程規劃｜</strong>提供上下學期課程及&amp;寒暑假密集營隊企劃及短期或單次課程。</li>
-              <li><strong>結合手作體驗｜</strong>融入葉材黏貼、珍珠板、編織等花器與架構 DIY，探索不同植物媒材。</li>
-              <li><strong>專業師資授課｜</strong>師資具備教育部核準的教學証件與教學經歷，讓合作單位安心安排。</li>
-              <li><strong>配合行政流程｜</strong>可依學校與機構需求，提供課程企劃及報價諮詢。</li>
+              <li><strong>多元班別｜</strong>學期社團、寒暑期營隊與單次體驗</li>
+              <li><strong>手作探索｜</strong>結合植物與異材質花器、架構 DIY</li>
+              <li><strong>合格師資｜</strong>具教育部核准教學證件與授課經歷</li>
+              <li><strong>行政配合｜</strong>提供學校與機構課程企劃及報價</li>
             </ul>
           </div>
           <a href="#booking" class="btn btn-outline" onclick="prefillBooking('b2b', '小小花藝師兒童課（校園課後社團／寒暑期營隊外派）')">洽詢校園與機構課程</a>
@@ -1466,13 +1473,13 @@
         <div class="b2b-card">
           <div>
             <span class="b2b-num">SERVICE 02｜企業與團體包班</span>
-            <h3>企業舒壓工作坊・品牌體驗・團體包班</h3>
-            <p>暫時放下忙碌，在花草與手作之間，享受專注創作的時光。無論是企業福委活動、品牌貴賓體驗或私人聚會，皆可依人數、主題與場地需求規劃專屬課程至企業指定場地舉辦。曾與台東縣政府、高雄地區農會、屏東地區農會合作開課。</p>
+            <h3>企業舒壓・品牌體驗・團體包班</h3>
+            <p>依人數、主題與場地規劃外派專屬課程，曾與台東縣政府及高屏農會合作開課。</p>
             <ul class="b2b-list">
-              <li><strong>多樣花藝主題｜</strong>歐式桌花、諾貝松聖誕樹、花圈、歲末祈福門飾與多肉組盆。</li>
-              <li><strong>延伸感官體驗｜</strong>可搭配午後茶點或草本木質香氛，豐富活動內容。</li>
-              <li><strong>彈性活動規劃｜</strong>依團體人數與活動主題，安排合適的課程內容。</li>
-              <li><strong>刀剪工具代購｜</strong>課程所需刀剪與工具，提前告知、可代為採購。</li>
+              <li><strong>多樣主題｜</strong>桌花、聖誕樹、祈福門飾與多肉組盆</li>
+              <li><strong>感官延伸｜</strong>可搭配午後茶點或草本木質香氛</li>
+              <li><strong>彈性規劃｜</strong>依團體人數、預算與主題量身安排</li>
+              <li><strong>工具代購｜</strong>可提前協助採購課程所需花藝刀剪</li>
             </ul>
           </div>
           <a href="#booking" class="btn btn-outline" onclick="prefillBooking('b2b', '企業團體包班／VIP品牌花藝工作坊')">洽詢企業與團體包班</a>
@@ -1481,13 +1488,13 @@
         <div class="b2b-card">
           <div>
             <span class="b2b-num">SERVICE 03｜花禮與空間訂製</span>
-            <h3>婚禮花藝・節慶花禮・商業空間佈置</h3>
-            <p>以當季花材與細膩設計，將心意化為花禮，為重要時刻與日常空間增添自然之美。從婚禮、節慶贈禮到品牌空間，皆可依場合與風格需求洽詢訂製。</p>
+            <h3>婚禮花藝・節慶花禮・空間佈置</h3>
+            <p>以當季花材與細膩設計將心意化為花禮，從婚禮、節慶贈禮到商業空間皆可客製。</p>
             <ul class="b2b-list">
-              <li><strong>婚禮花藝｜</strong>花束、Ajour 開放式結構新娘捧花、胸花與婚禮桌花訂製。</li>
-              <li><strong>節慶花禮｜</strong>歲末祈福門飾、桌花、聖誕節諾貝松花禮，以及【平安結界】、【窗前光明】主題作品。</li>
-              <li><strong>商業花藝｜</strong>開幕盆花、乾燥花與不凋花禮盒、展場及商業空間佈置。</li>
-              <li><strong>企業客製｜</strong>企業節慶贈禮與專屬花禮設計諮詢。</li>
+              <li><strong>婚禮花藝｜</strong>新娘捧花、胸花、花束與婚禮桌花</li>
+              <li><strong>節慶花禮｜</strong>歲末祈福門飾、聖誕諾貝松與桌花</li>
+              <li><strong>商業花藝｜</strong>開幕盆花、永生乾燥花禮與展場佈置</li>
+              <li><strong>企業客製｜</strong>企業節慶贈禮與專屬花禮設計諮詢</li>
             </ul>
           </div>
           <a href="#booking" class="btn btn-outline" onclick="prefillBooking('b2b', '婚禮捧花／節慶花禮／商業空間花藝客製')">洽詢客製花禮與佈置</a>
