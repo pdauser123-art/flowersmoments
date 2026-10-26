@@ -797,54 +797,110 @@
 
     .teacher-banner {
       background-color: var(--bg-card);
-      padding: 36px;
+      padding: 28px 32px;
       border: 1px solid var(--border-line);
       display: grid;
-      grid-template-columns: 0.85fr 1.45fr;
-      gap: 36px;
+      grid-template-columns: 0.72fr 1.48fr;
+      gap: 32px;
       align-items: center;
     }
 
     .teacher-profile-box {
       background-color: var(--bg-beige);
-      padding: 32px 24px;
-      text-align: center;
+      padding: 22px 24px;
       border: 1px solid var(--border-line);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      text-align: left;
     }
 
     .teacher-monogram {
-      width: 68px;
-      height: 68px;
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
       border-radius: 50%;
       background-color: var(--bg-cream);
       border: 1px solid var(--border-line);
-      padding: 10px;
+      padding: 9px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
     }
 
     .teacher-name {
-      font-size: 1.28rem;
-      margin-top: 14px;
-      margin-bottom: 4px;
-      line-height: 1.35;
+      font-size: 1.22rem;
+      margin: 0 0 2px;
+      line-height: 1.3;
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .teacher-name-en {
-      display: inline-block;
-      font-size: 0.92rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       font-weight: 400;
-      margin-top: 2px;
     }
 
     .teacher-role {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--sage-dark);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .teacher-summary-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-line);
+    }
+
+    .teacher-summary-head h3 {
+      font-size: 1.08rem;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .teacher-summary-head span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .teacher-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .teacher-meta-item {
+      background-color: var(--bg-cream);
+      border: 1px solid var(--border-line);
+      padding: 12px 14px;
+    }
+
+    .teacher-meta-label {
+      font-size: 0.74rem;
+      color: var(--sage-dark);
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .teacher-meta-val {
+      font-size: 0.83rem;
+      color: var(--text-main);
+      line-height: 1.55;
     }
 
     .partner-tags {
@@ -1111,6 +1167,7 @@
       .b2b-grid,
       .philosophy-grid,
       .teacher-banner,
+      .teacher-meta-grid,
       .booking-layout,
       .footer-grid,
       .form-two-col {
@@ -1166,6 +1223,7 @@
     body.is-mobile-device .b2b-grid,
     body.is-mobile-device .philosophy-grid,
     body.is-mobile-device .teacher-banner,
+    body.is-mobile-device .teacher-meta-grid,
     body.is-mobile-device .booking-layout,
     body.is-mobile-device .footer-grid,
     body.is-mobile-device .form-two-col {
@@ -1569,17 +1627,33 @@
               <use href="#huayi-flower-logo" />
             </svg>
           </div>
-          <h3 class="teacher-name">鄭家俞<br><span class="teacher-name-en">Sophia Florist</span></h3>
-          <div class="teacher-role">花驛 主理花藝師 ／ 專業花藝講師</div>
-          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.75;">
-            深耕歐式花藝常態與證照教學、自然地景花藝創作與校園兒童花藝教育，帶領專業助教團隊共同推廣生活花藝美學。
-          </p>
+          <div>
+            <h3 class="teacher-name">鄭家俞 <span class="teacher-name-en">Sophia Florist</span></h3>
+            <div class="teacher-role">花驛 主理花藝師 ／ 專業花藝講師</div>
+            <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.6; margin-top:6px;">
+              帶領專業助教團隊，結合系統化花藝教學與生活美學推廣。
+            </p>
+          </div>
         </div>
         <div>
-          <h3 style="font-size:1.25rem; margin-bottom:12px;">教學經歷與長期合作網絡</h3>
-          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.85;">
-            花驛於<strong>台東教室（Fun Trip - 福美海景渡假民宿）</strong>、<strong>高雄教室</strong>與<strong>屏東教室</strong>隔週常態開課。除定期成人常態班與證照班外，亦長期擔任校園課後社團指導教師與戶外跨界花藝主辦單位，具備豐富之教學企劃與活動執行經驗。
-          </p>
+          <div class="teacher-summary-head">
+            <h3>教學經歷與合作實績</h3>
+            <span>TAITUNG · KAOHSIUNG · PINGTUNG</span>
+          </div>
+          <div class="teacher-meta-grid">
+            <div class="teacher-meta-item">
+              <span class="teacher-meta-label">三地常態開課</span>
+              <div class="teacher-meta-val">台東（福美海景民宿）、高雄、屏東教室隔週定期授課</div>
+            </div>
+            <div class="teacher-meta-item">
+              <span class="teacher-meta-label">專業教學領域</span>
+              <div class="teacher-meta-val">歐式花藝與證照培訓、新娘捧花、山海地景與節慶創作</div>
+            </div>
+            <div class="teacher-meta-item">
+              <span class="teacher-meta-label">校園與機構外派</span>
+              <div class="teacher-meta-val">高屏台東多所國小社團、附幼、縣府及農會合作講師</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
